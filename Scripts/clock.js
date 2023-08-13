@@ -18,6 +18,11 @@ let hrs = document.getElementById('hrs');
 let mins = document.getElementById('mins');
 let secs = document.getElementById('secs');
 
+//chinese zodiac variables
+
+let currentYear = document.getElementById('currentYear');
+let zodiacName = document.getElementById('zodiac-year-name');
+
 //clock interval
 
 setInterval(setTime, 1000);
@@ -27,8 +32,11 @@ setInterval(setTime, 1000);
 
 function setTime() {
   let localTime = new Date();
-  setDate();
-  setTimeUntilMidnight();
+
+  setDate(localTime);
+  setTimeUntilMidnight(localTime);
+  setChineseZodiac(localTime);
+
   if (localTime.getHours() < 10) {
     hours.innerHTML = `&nbsp;0${localTime.getHours()}&nbsp;`;
   } else {
@@ -48,8 +56,7 @@ function setTime() {
   }
 }
 
-function setDate() {
-  let localTime = new Date();
+function setDate(localTime) {
   year.innerHTML = localTime.getFullYear();
   
   if (localTime.getMonth() === 0) {
@@ -78,18 +85,62 @@ function setDate() {
     month.innerHTML = 'December';
   }
 
-  if (localTime.getDay() < 10) {
-    day.innerHTML = `0${localTime.getDay()}`;
+  if (localTime.getDate() < 10) {
+    day.innerHTML = `0${localTime.getDate()}`;
   } else {
-    day.innerHTML = `${localTime.getDay()}`;
-    console.log(day.innerHTML);
+    day.innerHTML = `${localTime.getDate()}`;
   }
 }
 
-function setTimeUntilMidnight() {
-  let localTime = new Date();
+function setTimeUntilMidnight(localTime) {
   hrs.innerHTML = 24 - localTime.getHours();
   mins.innerHTML = 60 - localTime.getMinutes();
   secs.innerHTML = 60 - localTime.getSeconds();
-
 }
+
+function setChineseZodiac(localTime) {
+
+  currentYear.innerHTML = localTime.getFullYear();
+  let year = localTime.getFullYear();
+  let remainder = (year - 4) % 12;
+
+  switch (remainder) {
+    case 0:
+      zodiacName.innerHTML = `Year of the Rat`;
+      break;
+    case 1:
+      zodiacName.innerHTML = `Year of the Ox`;
+      break;
+    case 2:
+      zodiacName.innerHTML = `Year of the Tiger`;
+      break;
+    case 3:
+      zodiacName.innerHTML = `Year of the Rabbit`;
+      break;
+    case 4:
+      zodiacName.innerHTML = `Year of the Dragon`;
+      break;
+    case 5:
+      zodiacName.innerHTML = `Year of the Snake`;
+      break;
+    case 6:
+      zodiacName.innerHTML = `Year of the Horse`;
+      break;
+    case 7:
+      zodiacName.innerHTML = `Year of the Goat`;
+      break;
+    case 8:
+      zodiacName.innerHTML = `Year of the Monkey`;
+      break;
+    case 9:
+      zodiacName.innerHTML = `Year of the Rooster`;
+      break;
+    case 10:
+      zodiacName.innerHTML = `Year of the Dog`;
+      break;
+    case 11:
+      zodiacName.innerHTML = `Year of the Pig`;
+      break;
+  }
+}
+

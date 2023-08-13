@@ -11,12 +11,14 @@
   <title>Clock Tools</title>
 </head>
 <body>
+
   <div class="clock-container">
     <p><span id="hours"></span><span class="special-seperator">&nbsp;&#8487;&nbsp;</span>
        <span id="minutes"></span><span class="special-seperator">&nbsp;&#8487;&nbsp;</span>
        <span id="seconds"></span>
     </p>
   </div>
+
   <div class="undertext-container">
     <p id="undertext">
       <span>Hours</span>
@@ -24,6 +26,7 @@
       <span>Seconds</span>
     </p>
   </div>
+
   <div class="date-container">
     <p id="date-text">
       <span id="year">Year</span>
@@ -31,11 +34,30 @@
       <span id="day">Day</span>
     </p>
   </div>
+
   <div class="hours-till-midnight-container">
     <span>
       <span id="hrs"></span> hrs <span id="mins"></span> mins <span id="secs"></span> secs
     </span>
     <span>until midnight</span>
+  </div>
+
+  <div class="chinese-sign-container">
+    <div class="chinese-sign-text">
+      <span id="currentYear"></span>
+      <span id="middle-dot">&#183;</span>
+      <span id="zodiac-year-name"></span>
+    </div>
+  </div>
+  
+  <div class="navigation-container">
+      <button class="stopwatch-button" title="Stopwatch Page">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><g><path d="M19.414 8.902c.104-.048.206-.108.293-.195l.5-.5c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-.5.5-.115.173c-1.387-1.312-3.188-2.19-5.189-2.41l.011-.056v-1h1c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1s.45 1 1 1h1v1l.012.057c-4.506.492-8.012 4.307-8.012 8.943 0 4.971 4.029 9 9 9s9-4.029 9-9c0-1.894-.588-3.648-1.586-5.098zm-7.414 12.098c-3.859 0-7-3.14-7-7s3.141-7 7-7 7 3.14 7 7-3.141 7-7 7zM13 13v-2c0-.55-.45-1-1-1s-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1s-.45-1-1-1h-2zM12 8c-3.312 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6zm0 11c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path></g></svg>
+      </button>
+
+      <button class="glasstime-button" title="Timer Page">
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg"><path d="M255.656 22.75c-131.173 0-237.72 33.326-237.72 74.344.002 22.39 32.41 42.59 82.564 56.22-17.407-8.91-27.53-19.216-27.53-30.47 0-32.128 81.75-58.53 182.686-58.53 100.937 0 183.25 26.4 183.25 58.53 0 11.194-10.3 21.59-27.53 30.47 49.843-13.627 81.968-33.91 81.968-56.22 0-41.018-106.514-74.344-237.688-74.344zM147.47 103.094v30.094h216.28v-30.094H147.47zm4.374 48.78V361.94h18.687V151.875h-18.686zm39.125 0c.698 61.812 25.325 96.435 52.81 103.814-27.847 7.475-52.776 42.9-52.843 106.25h128.188c-.066-63.353-24.952-98.766-52.78-106.25 27.468-7.386 52.05-41.998 52.75-103.813H190.968zm147.936 0V361.94h18.688V151.875h-18.688zM100.5 360.72c-50.153 13.626-82.563 33.827-82.563 56.217 0 41.018 106.546 74.344 237.72 74.344 131.173 0 237.687-33.325 237.687-74.342 0-22.31-32.125-42.593-81.97-56.22 17.232 8.88 27.532 19.244 27.532 30.438 0 32.13-82.313 58.563-183.25 58.563S72.97 423.283 72.97 391.155c0-11.254 10.123-21.528 27.53-30.437zm46.97 19.905v30.063h216.28v-30.063H147.47z"></path></svg>
+      </button>
   </div>
 
   <script src="./Scripts/clock.js"></script>

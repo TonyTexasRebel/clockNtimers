@@ -6,6 +6,7 @@ body {
   background-image: url('../Images/background-page1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: default;
 }
 
 .clock-container {
@@ -69,3 +70,55 @@ body {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.527);
   font-size: 20px;
 }
+
+.chinese-sign-container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  position: relative;
+  top: 150px;
+}
+
+.chinese-sign-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  background-color: rgba(117, 117, 117, 0.048);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+#middle-dot {
+  font-size: 30px;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  position: relative;
+  bottom: 440px;
+
+}
+
+
+
+.stopwatch-button, .glasstime-button {
+
+  color: white;
+  background-color: rgba(61, 61, 61, 0.116);
+  backdrop-filter: blur(8px);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border-width: 0px;
+  cursor: pointer;
+  padding: 4px;
+  
+}
+
