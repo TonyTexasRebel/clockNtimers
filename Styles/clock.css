@@ -29,12 +29,43 @@ body {
 }
 
 #undertext {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   position: relative;
   bottom: 70px;
   width: 620px;
   font-size: 12px;
   color: white;
+  left: 8px;
+
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#date-text {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  position: relative;
+  width: 400px;
+  font-size: 30px;
+  bottom: 80px;
+  color: white;
+}
+
+.hours-till-midnight-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  top: 600px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.527);
+  font-size: 20px;
 }
