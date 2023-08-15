@@ -119,6 +119,10 @@ body {
   border-width: 0px;
   cursor: pointer;
   padding: 4px;
-  
+  transition: box-shadow 0.5s;
+}
+
+.stopwatch-button:hover, .glasstime-button:hover {
+  box-shadow: 0px 0px 8px 2px rgb(221, 221, 221);
 }
 

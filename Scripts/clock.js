@@ -23,11 +23,17 @@ let secs = document.getElementById('secs');
 let currentYear = document.getElementById('currentYear');
 let zodiacName = document.getElementById('zodiac-year-name');
 
+//switch page variables
+
+let stopwatchButton = document.querySelector('.stopwatch-button');
+
 //clock interval
 
 setInterval(setTime, 1000);
 
+//event listeners
 
+document.addEventListener('click', switchPage);
 //functions
 
 function setTime() {
@@ -142,5 +148,9 @@ function setChineseZodiac(localTime) {
       zodiacName.innerHTML = `Year of the Pig`;
       break;
   }
+}
+
+function switchPage() {
+  location.href = '/JS - Clock Timer/stopwatch.html';
 }
 
