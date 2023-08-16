@@ -33,7 +33,8 @@ setInterval(setTime, 1000);
 
 //event listeners
 
-document.addEventListener('click', switchPage);
+stopwatchButton.addEventListener('click', switchPage);
+
 //functions
 
 function setTime() {
