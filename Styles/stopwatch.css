@@ -23,8 +23,8 @@ body {
   justify-content: space-evenly;
   width: 150px;
   position: relative;
-  bottom: 432px;
-  right: 878px;
+  bottom: 387px;
+  right: 876px;
 
 }
 
@@ -50,15 +50,39 @@ body {
   color: white;
   font-size: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  width: 900px;
 }
 
 .names-container {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 800px;
+  position: relative;
+  bottom: 20px;
+}
+
+#name-hour {
+  position: relative;
+  left: 32px;
+}
+
+#name-minute {
+  position: relative;
+  left: 34px;
+}
+
+#name-second {
+  position: relative;
+  left: 20px;
+}
+
+#name-decisecond {
+  position: relative;
+  right: 4px;
 }
 
 
