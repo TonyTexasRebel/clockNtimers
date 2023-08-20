@@ -26,6 +26,8 @@ let zodiacName = document.getElementById('zodiac-year-name');
 //switch page variables
 
 let stopwatchButton = document.querySelector('.stopwatch-button');
+let timerButton = document.querySelector('.glasstime-button');
+
 
 //clock interval
 
@@ -33,7 +35,9 @@ setInterval(setTime, 1000);
 
 //event listeners
 
-stopwatchButton.addEventListener('click', switchPage);
+stopwatchButton.addEventListener('click', switchToStopwatch);
+timerButton.addEventListener('click', switchToTimer);
+
 
 //functions
 
@@ -151,7 +155,11 @@ function setChineseZodiac(localTime) {
   }
 }
 
-function switchPage() {
+function switchToTimer() {
+  location.href = '/JS - Clock Timer/timer.html';
+}
+
+function switchToStopwatch() {
   location.href = '/JS - Clock Timer/stopwatch.html';
 }
 

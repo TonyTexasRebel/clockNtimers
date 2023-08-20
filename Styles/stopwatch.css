@@ -23,9 +23,8 @@ body {
   justify-content: space-evenly;
   width: 150px;
   position: relative;
-  bottom: 387px;
-  right: 876px;
-
+  bottom: 376px;
+  right: 877px;
 }
 
 .home-button, .glasstime-button {
@@ -53,6 +52,10 @@ body {
   justify-content: space-evenly;
   align-items: center;
   width: 900px;
+  height: 121px;
+  backdrop-filter: invert(20%);
+  border-radius: 4px;
+  cursor: default;
 }
 
 .names-container {
@@ -67,22 +70,61 @@ body {
 
 #name-hour {
   position: relative;
-  left: 32px;
+  left: 68px;
 }
 
 #name-minute {
   position: relative;
-  left: 34px;
+  left: 10px;
 }
 
 #name-second {
   position: relative;
-  left: 20px;
+  right: 60px;
 }
 
-#name-decisecond {
+.start-button {
+  color: white;
+  background-color: rgba(46, 46, 46, 0.712);
+  border: none;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: backdrop-filter 0.8s, box-shadow 0.2s;
+
+}
+
+.stop-button {
+  color: white;
+  background-color: rgba(46, 46, 46, 0.712);
+  border: none;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: backdrop-filter 0.8s, box-shadow 0.2s;
+}
+
+.stop-button:hover, .start-button:hover {
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 6px 2px rgba(36, 36, 36, 0.726);
+}
+
+.stop-start-container {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   position: relative;
-  right: 4px;
+  top: 20px;
+  height: 22px;
 }
 
 

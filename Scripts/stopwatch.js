@@ -2,6 +2,7 @@
 //navigation element variables
 
 let homeButton = document.querySelector('.home-button');
+let timerButton = document.querySelector('.glasstime-button');
 
 //stopwatch element variables
 
@@ -24,7 +25,8 @@ let hours = 0;
 
 //event listeners
 
-homeButton.addEventListener('click', switchPage);
+homeButton.addEventListener('click', switchToHome);
+timerButton.addEventListener('click', switchToTimer);
 startButtonElement.addEventListener('click', startStopwatch);
 stopButtonElement.addEventListener('click', stopStopwatch);
 
@@ -34,9 +36,14 @@ stopButtonElement.addEventListener('click', stopStopwatch);
 
 //functions
 
-function switchPage() {
-  location.href = '/JS - Clock Timer/index.html';
+function switchToHome() {
+    location.href = '/JS - Clock Timer/index.html';
 }
+
+function switchToTimer() {
+  location.href = '/JS - Clock Timer/timer.html';
+}
+
 
 
 function count() {
@@ -49,7 +56,17 @@ function count() {
 
 
 function startStopwatch() {
+  hoursElement.style.color = '#ffffff';
+  minutesElement.style.color = '#ffffff';
+  secondsElement.style.color = '#ffffff';
+  hoursElement.style.textShadow = '';
+  minutesElement.style.textShadow = '';
+  secondsElement.style.textShadow = '';
+
+  
   if (startButtonPressed === false) {
+    seconds = seconds + 1;
+    displayStopwatch();
     stopwatchInterval = setInterval(count, 1000);
     startButtonPressed = true;
   }
@@ -58,9 +75,15 @@ function startStopwatch() {
 
 function stopStopwatch() {
 
-  clearInterval(stopwatchInterval);
+  hoursElement.style.color = '#d6d6d6';
+  minutesElement.style.color = '#d6d6d6';
+  secondsElement.style.color = '#d6d6d6';
+  hoursElement.style.textShadow = '0px 0px 8px black';
+  minutesElement.style.textShadow = '0px 0px 8px black';
+  secondsElement.style.textShadow = '0px 0px 8px black';
 
-  deciseconds = 0;
+  clearInterval(stopwatchInterval);
+  console.log(hoursElement.style);
   seconds = 0;
   minutes = 0;
   hours = 0;
